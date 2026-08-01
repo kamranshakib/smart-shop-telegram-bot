@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مینی‌شاپ حرفه‌ای</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #07111f;
+        --bg-soft: #0f172a;
+        --card: rgba(255,255,255,0.09);
+        --text: #f8fafc;
+        --muted: #cbd5e1;
+        --accent: #f59e0b;
+        --accent-2: #ef4444;
+        --accent-3: #22c55e;
+        --border: rgba(255,255,255,0.16);
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+        background: linear-gradient(135deg, #07111f 0%, #111827 50%, #0f172a 100%);
+        color: var(--text);
+      }
+
+      .hero {
+        padding: 48px 20px 24px;
+        text-align: center;
+        background: radial-gradient(circle at top, rgba(245, 158, 11, 0.16), transparent 55%);
+      }
+
+      .hero h1 {
+        font-size: 32px;
+        margin: 8px 0 12px;
+        font-weight: 800;
+      }
+
+      .hero p {
+        color: var(--muted);
+        max-width: 760px;
+        margin: 0 auto 24px;
+        line-height: 1.9;
+        font-size: 16px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(245, 158, 11, 0.15);
+        color: #fde68a;
+        margin-bottom: 12px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card {
+        background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 20px;
+        backdrop-filter: blur(18px);
+        box-shadow: 0 18px 45px rgba(0,0,0,0.28);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 24px 50px rgba(0,0,0,0.35);
+      }
+
+      .card-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 16px;
+        margin-bottom: 14px;
+        border: 1px solid rgba(255,255,255,0.12);
+      }
+
+      .card h3 {
+        margin: 0 0 10px;
+        font-size: 21px;
+        font-weight: 700;
+      }
+
+      .card p {
+        color: var(--muted);
+        line-height: 1.8;
+        margin: 0 0 14px;
+      }
+
+      .price {
+        font-size: 24px;
+        color: #fef3c7;
+        margin: 12px 0 16px;
+        font-weight: 800;
+      }
+
+      .price small {
+        display: block;
+        font-size: 12px;
+        color: #bbf7d0;
+        margin-top: 4px;
+      }
+
+      button {
+        border: none;
+        border-radius: 14px;
+        padding: 11px 16px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: white;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: 0 10px 24px rgba(239,68,68,0.2);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 0 20px 20px;
+      }
+
+      .nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.08);
+        font-weight: 600;
+      }
+
+      .footer {
+        text-align: center;
+        color: var(--muted);
+        padding: 24px 20px 40px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="badge">✨ فروشگاه آنلاین مدرن و حرفه‌ای</div>
+      <h1>بهترین محصولات با تجربه خرید فوق‌العاده</h1>
+      <p>از محصولات محبوب گرفته تا پیشنهادهای ویژه، همه چیز در یکجا و با طراحی مدرن برای مشتریان شما آماده شده است.</p>
+      <div class="nav">
+        <a href="#products">محصولات</a>
+        <a href="#offers">پیشنهادهای ویژه</a>
+        <a href="#support">پشتیبانی</a>
+      </div>
+    </section>
+
+    <section id="products" class="grid">
+      <div class="products-grid">
+        <div class="card">
+          <img class="card-image" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="کفش چرمی لوکس" />
+          <h3>کفش چرمی لوکس</h3>
+          <p>طراحی شیک، کیفیت فوق‌العاده و مناسب برای استفاده روزمره.</p>
+          <div class="price">۴۵۰ افغانی<small>ارسال رایگان</small></div>
+          <button>افزودن به سبد</button>
+        </div>
+        <div class="card">
+          <img class="card-image" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80" alt="ساعت هوشمند" />
+          <h3>ساعت هوشمند</h3>
+          <p>ساعت با امکانات کامل، طراحی مدرن و پشتیبانی از سلامت کاربر.</p>
+          <div class="price">۹۰۰ افغانی<small>گارانتی ۱ ساله</small></div>
+          <button>افزودن به سبد</button>
+        </div>
+        <div class="card">
+          <img class="card-image" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80" alt="هدفون بی‌سیم" />
+          <h3>هدفون بی‌سیم</h3>
+          <p>صدای حرفه‌ای، باتری ماندگار و طراحی راحت برای استفاده طولانی.</p>
+          <div class="price">۸۰۰ افغانی<small>تضمین کیفیت</small></div>
+          <button>افزودن به سبد</button>
+        </div>
+        <div class="card">
+          <img class="card-image" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="عینک مدرن" />
+          <h3>عینک مدرن</h3>
+          <p>استایل شیک و مناسب برای استفاده روزمره و مهمانی‌ها.</p>
+          <div class="price">۶۵۰ افغانی<small>ارسال سریع</small></div>
+          <button>افزودن به سبد</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="offers" class="grid">
+      <div class="card">
+        <h3>پیشنهاد ویژه هفته</h3>
+        <p>تخفیف ویژه روی مدل‌های محبوب با ارسال سریع و ضمانت اصالت.</p>
+      </div>
+      <div class="card">
+        <h3>ارسال سریع</h3>
+        <p>تحویل در کمترین زمان و پشتیبانی ۲۴ ساعته برای مشتریان.</p>
+      </div>
+    </section>
+
+    <div id="support" class="footer">پشتیبانی: +93795242337</div>
+  </body>
+</html>
